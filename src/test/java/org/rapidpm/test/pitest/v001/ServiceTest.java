@@ -1,6 +1,7 @@
 package org.rapidpm.test.pitest.v001;
 
 import org.assertj.core.api.Assertions;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
