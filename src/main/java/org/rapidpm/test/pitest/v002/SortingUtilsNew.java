@@ -57,15 +57,10 @@ public class SortingUtilsNew implements SortingUtils {
     final String[] ret = new String[2];
     int l;
 
-    if (a.length() < b.length()) {
-      l = a.length();
-    }
-    else {
-      l = b.length();
-    }
+    if (a.length() < b.length()) l = a.length();
+    else                         l = b.length();
 
-    int position = 0;
-    //until first character differs
+    int position = 0; //until first character differs
     for (; position < l; position++) {
       final char charA = a.charAt(position);
       final char charB = b.charAt(position);
@@ -73,18 +68,12 @@ public class SortingUtilsNew implements SortingUtils {
         break;
       }
     }
+    if (position >= a.length()) ret[0]="";
+    else                        ret[0]=a.substring(position);
 
-    // remaining filename parts
-    if (position >= a.length()) {
-      ret[0]="";
-    } else {
-      ret[0]=a.substring(position);
-    }
-    if (position >= b.length()) {
-      ret[1]="";
-    } else {
-      ret[1]=b.substring(position);
-    }
+    if (position >= b.length()) ret[1]="";
+    else                        ret[1]=b.substring(position);
+
     return ret;
   }
 
